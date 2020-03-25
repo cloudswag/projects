@@ -15,10 +15,10 @@
     1. A Working RESTful Web Service listening on http://localhost:8080
        a. Curl returns
 
-    2. A Service that Accepts a postive number as input and returns Fibonacci numbers at http://localhost:8080/fib/$number
+    2. A Service that Accepts a postive number as input and returns Fibonacci numbers at http://localhost:8080/fib/$number via POST.
        a. example would be http://localhost:8080/fib/5 to return 5 integers starting with 0 and 1 as
 
-          <code> curl http://localhost:8080/fib/5
+          <code> curl -x POST http://localhost:8080/fib/5
           {
              "result": [
                0,
