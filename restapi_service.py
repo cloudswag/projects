@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
   return render_template("index.html")
 
-@app.route("/fib/<int:num>", methods=["GET"])
+@app.route("/fib/<int:num>", methods=["POST"])
 def fib(num): 
   number_type = float(num)
   if number_type >= 0:
