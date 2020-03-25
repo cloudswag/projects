@@ -3,13 +3,9 @@ from flask_api import status
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
-  if request.method == "POST":
-    some_json = request.get_json()
-    return jsonify({"you sent" : some_json}), 201
-  else:
-    return jsonify({"main" : "code screen"})
+  return render_template("index.html")
 
 @app.route("/fib/<int:num>", methods=["GET"])
 def fib(num): 
@@ -27,6 +23,6 @@ def fib(num):
     my_resp = make_response("Error Non Postive Number!")
     my_resp.status_code = 403
     return my_resp
-
+  
 if __name__ == "__main__":
   app.run(debug=True, port=8080)
