@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DELL Code Screen</title>
+</head>
+
+<body>
+  <h1 style="color: blue">Dell Code Review</h1>
+  <h3>This REST API Service is to provide the customer the following information:</h3>
+  <pre>
+    1. A Working RESTful Web Service listening on http://localhost:8080
+       a. Curl returns
+
+    2. A Service that Accepts a postive number as input and returns Fibonacci numbers at http://localhost:8080/fib/$number
+       a. example would be http://localhost:8080/fib/5 to return 5 integers starting with 0 and 1 as
+
+          <code> curl http://localhost:8080/fib/5
+          {
+             "result": [
+               0,
+               1,
+               1,
+               2,
+               3
+             ]
+           }
+          </code>
+   </pre>
+
+   <h3>The following are expected and should return an error</h3>
+   <pre>
+    1. When the customer enters a negative or alpha value as a Fibonacci number.
+       a. example would be http://localhost:8080/fib/-5 resulting in an 404 status code.
+   </pre>
+
+   <h3>GitHub</h3>
+   <pre>
+    1. https://github.com/cloudswag/projects.git
+    2. Download ZIP https://github.com/cloudswag/projects/archive/master.zip
+   </pre>
+</body>
+
+</html>
